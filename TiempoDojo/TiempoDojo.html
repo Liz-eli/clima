@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clima Dojo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="TiempoDojo.css">
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="nav">
+            <h1>Pronostico Dojo</h1>
+            <ul class="links">
+                <li onclick="loading()"><a href="#">Encarnacion</a></li>
+                <li onclick="loading()"><a href="#">Hohenau</a></li>
+                <li onclick="loading()"><a href="#">Posadas</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <div class="subtitulo">
+            <h2>Ciudad Nueva</h2>
+            <form>
+                <label>Mostrar temperatura en </label>
+                <select name="escala-temperatura" onchange="convert(this)">
+                    <option>°C</option>
+                    <option>°F</option>
+                </select>
+            </form>
+        </div>
+        <div class="row">
+            <div class="reporte-clima">
+                <h1>Hoy</h1>
+                <img src="assets/some_rain.png" alt="rain">
+                <p>algo de lluvia</p>
+                <p class="temperaturas">
+                    <span class="high" id="temp1">24</span>
+                    <span class="low" id="temp2">18</span>
+                </p>
+            </div>
+            <div class="reporte-clima">
+                <h1>Mañana</h1>
+                <img src="assets/some_sun.png" alt="sun">
+                <p>parcialmente soleado</p>
+                <p class="temperaturas">
+                    <span class="high" id="temp3">27</span>
+                    <span class="low" id="temp4">19</span>
+                </p>
+            </div>
+            <div class="reporte-clima">
+                <h1>Viernes</h1>
+                <img src="assets/some_clouds.png" alt="clouds">
+                <p>Parcialmente nublado</p>
+                <p class="temperaturas">
+                    <span class="high" id="temp5">21</span>
+                    <span class="low" id="temp6">16</span>
+                </p>
+            </div>
+            <div class="reporte-clima">
+                <h1>Sabado</h1>
+                <img src="assets/some_sun.png" alt="sun">
+                <p>Caluroso</p>
+                <p class="temperaturas">
+                    <span class="high" id="temp7">39</span>
+                    <span class="low" id="temp8">21</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="cookie-policy">
+            <img src="assets/cookie.png" alt="cookie">
+            <div class="text">
+                <h2>¡Detente! Cookie Time</h2>
+                <p>Usamos cookies (lamentablemente no las comestibles) para personalizar el contenido y los anuncios,
+                    para proporcionar redes sociales
+                    características y analizar el tráfico de nuestro sitio. <a href="#">Leer mas...</a></p>
+            </div>
+            <button class="btn" onclick="accept()">Aceptar</button>
+        </div>
+    </div>
+    <script src="TiempoDojo.js"></script>
+</body>
+
+</html>
